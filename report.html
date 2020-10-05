@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+	<head>
+		<title id="pageTitle">SSP Report</title>
+		<link rel="stylesheet" href="/stylesheets/report.css">	
+	</head>
+	
+	<div id="overlay">
+		<div id="overlayText">
+			Preparing report...
+			<br><br>
+			<center><img src="/images/circleLogo.png" style="width:100px;height:100px"></center>
+		</div>
+	</div>
+	
+	<!-- <div id="settingsBar" align="center">
+		<button type="button" id="newReportButton">New Report</button>
+		<br><br>
+		
+		<button type="button" id="saveReportButton">SAVE</button>
+		<br><br>
+		<select id="reportList" size="5" style="width: 300px"></select>
+		<br><br>
+		<button type="button" id="loadReportButton">LOAD</button> <button type="button" id="deleteReportButton">Delete</button> <button type="button" id="refreshList">Refresh</button>
+		<br><br> -->
+	</div>
+	
+		<!-- <button type="button" id="settingsButton">Settings</button>
+		<br><br> -->
+	
+	<body>
+			<img align="right" src="/images/headerLogo.png"><br>
+			<h1 id="reportTitle">Student Success Plan</h1>
+			<table id="headerTable" class="headerTable" align="center" width="100%">
+				<tr>
+					<td>
+						<table id="leftTable" align="left" width="100%">
+							<tr>
+								<td align="left"><b>Name: </b><a id="studentName"></a></td>
+								<td align="left"><b>Caretaker(s): </b><a id="caretakerName"></a></td> 
+							</tr>
+							<tr>
+								<td align="left"><b>Current Grade: </b><a id="currentGrade"></a></td>
+								<td align="left"><b>Cohort Year: </b><a id="cohortYear"></a></td> 
+							</tr>
+							<tr>
+								<td align="left"><b>Start Year: </b><a id="startYear"></a></td>
+								<td align="left"><b>HS Credits: </b><a id="credits"></a></td> 
+							</tr>
+						</table>
+					</td>
+					<td>
+						<table id="rightTable" align="right" width="100%">
+							<tr>
+								<td align="right"><b>Contact Information: </b></td>
+							</tr>
+							<tr>
+								<td align="right" style="white-space: pre-line"><a id="contactNumbers"></a></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<div id="meetingInfoHead" width="100%" align="center">
+				<b>Meeting Date: </b><input type="date" id="currentMeetingDate">
+				<input type="checkbox" id="initialBox">	Initial Meeting <input type="checkbox" id="reviewBox"> Review Meeting <input type="checkbox" id="finalBox"> Final Meeting
+				<br>
+			</div>
+					<table id="personTable" align="center" width="80%">
+						<h1 align="left">College and Career Readiness</h1>
+							<tr width="100%" align="center">
+								<td colspan="2"><b>Post Graduation Plans:&nbsp;&nbsp;</b><a id="postGradPlans"></a></td>
+							</tr>
+							<tr width="100%">
+								<td width="20%" align="right" style="padding-right: 10px">
+									<b>Areas of Strength:</b>
+								</td>
+								<td width="80%" height="60px" align="left" style="border-style:solid; border-width:1px; padding:6px">
+									<a id="strengthsPLP"></a>
+								</td>
+							</tr>
+							<tr width="100%">
+								<td width="20%" align="right" style="padding-right: 10px">
+									<b>Goals:</b>
+								</td>
+								<td width="80%" height="60px" align="left" style="border-style:solid; border-width:1px; padding:6px">
+									<a id="goalsPLP"></a>
+								</td>
+							</tr>
+							<tr width="100%">
+								<td width="20%" align="right" style="padding-right: 10px">
+									<b>Interests:</b>
+								</td>
+								<td width="80%" height="60px" align="left" style="border-style:solid; border-width:1px; padding:6px">
+									<a id="interestsPLP"></a>
+								</td>
+							</tr>
+						</table>
+			</div>
+			<h1>Academic Progress 2019-20</h1>
+			<table width="100%">
+				<tr>
+					<td id="academicInfo" align="center" width ="30%" style="valign=center; padding-right: 5px; margin: 0px;">
+						<h3>Attendance: </h3><br>
+						<b>Required Hours: </b><br>
+						<a id="daysAbsent"></a><br><br>
+						<b>Missing Hours: </b><br>
+						<a id="missingHours"></a><br><br>
+						<h3>Coursework: </h3><br>
+						<b>Lessons Overdue: </b><br>
+						<a id="overdueLessons"></a><br><br>
+						<b>Last Lesson Complete: </b><br>
+						<a id="lastLesson"></a><br><br>
+						<b>Last Assessment Complete: </b><br>
+						<a id="lastAssessment"></a><br><br>
+					</td>
+					<td id="gradebook" width ="70%"></td>
+				</tr>
+			</table>	
+			<br>
+			<br>
+			<h1>Student Success Plan Goal</h1>
+			<center><textarea class="dynamicTA" rows="4" id="goalTA" style="border:single 4px orange;">Ex. To review solutions to X problem...</textarea></td></center>
+			<div id="planOfAction">
+				<h1>Plan of Action</h1>
+				<center><textarea rows="8" class="dynamicTA" id="planTA">What must the student do for this plan? If this is a Review Meeting or Final Meeting, copy the Plan of Action from the Initial Meeting.</textarea></center>
+			</div>
+			<div id="progressTowardsGoal">
+				<h1>Progress Towards Goal</h1>
+				<center><textarea rows="8" class="dynamicTA" id="progressTA">If applicable, how has the student progressed toward their goal since the Initial Meeting?</textarea></center>
+			</div>
+			<div id="nextSteps">
+				<h1>Refinement & Next Steps</h1>
+				<center><textarea rows="8" class="dynamicTA" id="nextStepsTA">If applicable, what must the student adjust to help them reach their goal?</textarea></center>
+			</div>
+			<br>
+			<div id="nextMeeting">
+				<center><b>Next Meeting Date: </b><input type="date" id="nextMeetingDate"></center>
+			</div>
+			<h1>Additional Notes</h1>
+			<center><textarea rows="5" class="dynamicTA" id="notesTA"></textarea></center>
+			<br>
+			
+		<script src="/scripts/report.js"></script>
+	</body>
+</html>

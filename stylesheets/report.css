@@ -1,0 +1,144 @@
+body {
+			  background: rgb(255, 255, 255); 
+			  width: 21cm;
+			  margin: auto;
+			}
+			page {
+			  background: white;
+			  display: block;
+			  margin: 0 auto;
+			  margin-bottom: 1.2cm;
+			  padding: 0.5cm 1cm 0.5cm 1cm;
+			  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+			}
+			page[size="A4"] {  
+			  width: 21cm;
+			  height: 29cm; 
+			}
+			page[size="A4"][layout="portrait"] {
+			  width: 29.7cm;
+			  height: 21cm;  
+			}
+					
+			.headerTable {
+				width: 90%;
+				border-left: 6px solid orange;
+				background-color: lightgrey;
+			}
+			
+			h1 {
+				border-bottom: 3px solid grey;
+			}
+			h3 {
+				text-align: left;
+				border-bottom: 2px solid grey;
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			#settingsBar{
+				display: block;
+			}
+			
+			/* Style for personality survey table */
+			#personTable {
+			    border-collapse: separate;
+				border-spacing: 0 1.5em;
+			}
+			
+			/* Style for ALL dynamic textareas */
+				.dynamicTA {
+				  resize: none;
+				  border: 1px double #999;
+				  outline: none;
+				  padding: 2px 2px 2px 2px;
+				  color: #333;
+				  box-sizing: border-box;
+				}
+				.printTA {
+				  resize: none;
+				  border: 1px double #999;
+				  outline: none;
+				  padding: 2px 2px 2px 2px;
+				  color: #333;
+				  box-sizing: border-box;
+				}
+				#goalTA {
+					max-height: 120px;
+					width: 100%;
+					font-style: italic;
+					font-size: 15px;
+				}
+				#planTA {
+					width: 100%;
+				}
+				#progressTA {
+					width: 100%;
+				}
+				#nextStepsTA {
+					width: 100%;
+				}
+				#notesTA {
+					width: 100%;
+				}
+			
+			/* Style for overlay */
+				#overlay {
+					position: fixed; /* Sit on top of the page content */
+					display: none; /* Hidden by default */
+					width: 100%; /* Full width (cover the whole page) */
+					height: 100%; /* Full height (cover the whole page) */
+					top: 0; 
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+					z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+					cursor: pointer; /* Add a pointer on hover */
+				}
+				#overlayText{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					font-size: 50px;
+					color: white;
+					transform: translate(-50%,-50%);
+					-ms-transform: translate(-50%,-50%);
+				}
+			
+			/* Style for copied gradebook table */
+				.Shade,
+				.shade {
+				  background-color: #f1f1f1;
+				}
+				#gradebook table {
+					border-style: solid;
+					box-shadow: 0 0 0.1cm rgba(0,0,0,0.5);
+				}
+				#gradebook td {
+					width: 1%;
+					white-space: nowrap;
+				}
+				
+			@media print {
+				.dynamicTA { 
+					text-align: center;
+					border-style: none; 
+					overflow: hidden;
+					resize: none;
+				}
+				.printTA { 
+					border-style: none; 
+					overflow: hidden;
+					resize: none;
+				}
+				page {
+				  margin: 0 auto;
+				  magin-bottom: 0.5cm;
+				  padding: 0 auto;
+				}
+				body {
+				  margin: 0 auto;
+				  padding: 0 auto;
+				}
+			}
