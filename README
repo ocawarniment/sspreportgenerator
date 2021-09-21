@@ -1,0 +1,3 @@
+Steps to update for a new year...
+1. Change version in manifest.json - 1.{{YY-YY}}.1
+2. Change the data view ID on line 1 in background.js for the new truancy tracking DV.

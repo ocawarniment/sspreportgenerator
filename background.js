@@ -1,3 +1,6 @@
+// DV ID
+var dataviewId = '15492';
+
 // shortcut for local storage
 var storage = chrome.storage.local;
 
@@ -95,7 +98,7 @@ function createReport() {
 		});
 	});
 	// Load truancy DV
-	chrome.tabs.create({ url: 'https://www.connexus.com/webuser/dataview.aspx?idWebuser=' + studentID + '&idDataview=14661'}, function(tab) {
+	chrome.tabs.create({ url: 'https://www.connexus.com/webuser/dataview.aspx?idWebuser=' + studentID + '&idDataview=' + dataviewId}, function(tab) {
 		chrome.tabs.executeScript(tab.id, {
 			file: '/scripts/truancy.js',
 			runAt: 'document_idle'
