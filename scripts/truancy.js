@@ -36,6 +36,39 @@ if (document.querySelector('[id^="OCA_Truancy"][id$="_ReqInstrucHrs"') !== null)
 	storage.set({'daysAbsent': "Not Found"});
 }
 
+if (document.querySelector('[id^="Ohio_Truancy"][id$="_ReqInstHrs_F"') !== null) {
+	storage.set({'reqHours_fall': Math.round(document.querySelector('[id^="Ohio_Truancy"][id$="_ReqInstHrs_F"').innerText.trim()*100)/100});
+} else {
+	storage.set({'reqHours_fall': 0});
+}
+if (document.querySelector('[id^="Ohio_Truancy"][id$="_ActuAttHrs_F"') !== null) {
+	storage.set({'actHours_fall': Math.round(document.querySelector('[id^="Ohio_Truancy"][id$="_ActuAttHrs_F"').innerText.trim()*100)/100});
+} else {
+	storage.set({'actHours_fall': 0});
+}
+if (document.querySelector('[id^="Ohio_Truancy"][id$="_BankedHours_F"') !== null) {
+	storage.set({'difHours_fall': Math.round(document.querySelector('[id^="Ohio_Truancy"][id$="_BankedHours_F"').innerText.trim()*100)/100});
+} else {
+	storage.set({'difHours_fall': 0});
+}
+
+if (document.querySelector('[id^="Ohio_Truancy"][id$="_ReqInstHrs_S"') !== null) {
+	// days absent
+	storage.set({'reqHours_spring': Math.round(document.querySelector('[id^="Ohio_Truancy"][id$="_ReqInstHrs_S"').innerText.trim()*100)/100});
+} else {
+	storage.set({'reqHours_spring': 0});
+}
+if (document.querySelector('[id^="Ohio_Truancy"][id$="_ActuAttHrs_S"') !== null) {
+	storage.set({'actHours_spring': Math.round(document.querySelector('[id^="Ohio_Truancy"][id$="_ActuAttHrs_S"').innerText.trim()*100)/100});
+} else {
+	storage.set({'actHours_spring': 0});
+}
+if (document.querySelector('[id^="Ohio_Truancy"][id$="_BankedHours_S"') !== null) {
+	storage.set({'difHours_spring': Math.round(document.querySelector('[id^="Ohio_Truancy"][id$="_BankedHours_S"').innerText.trim()*100)/100});
+} else {
+	storage.set({'difHours_spring': 0});
+}
+
 // check if page had error
 if (document.title !== "Access Denied") {
 	// send message to report to notify completion

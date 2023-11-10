@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "OCA: SSP Report Generator",
-  "version": "2.2122.1",
+  "version": "2.2324.1",
   "description": "OCA extension for the counseling team to prepare SSP reports.",
   "browser_action": {
     "default_icon": "/images/icon.png"

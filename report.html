@@ -13,17 +13,7 @@
 		</div>
 	</div>
 	
-	<!-- <div id="settingsBar" align="center">
-		<button type="button" id="newReportButton">New Report</button>
-		<br><br>
-		
-		<button type="button" id="saveReportButton">SAVE</button>
-		<br><br>
-		<select id="reportList" size="5" style="width: 300px"></select>
-		<br><br>
-		<button type="button" id="loadReportButton">LOAD</button> <button type="button" id="deleteReportButton">Delete</button> <button type="button" id="refreshList">Refresh</button>
-		<br><br> -->
-	</div>
+
 	
 		<!-- <button type="button" id="settingsButton">Settings</button>
 		<br><br> -->
@@ -39,6 +29,7 @@
 								<td align="left"><b>Name: </b><a id="studentName"></a></td>
 								<td align="left"><b>Caretaker(s): </b><a id="caretakerName"></a></td> 
 							</tr>
+							<tr></tr><tr></tr><tr></tr><tr></tr>
 							<tr>
 								<td align="left"><b>Current Grade: </b><a id="currentGrade"></a></td>
 								<td align="left"><b>Cohort Year: </b><a id="cohortYear"></a></td> 
@@ -46,6 +37,20 @@
 							<tr>
 								<td align="left"><b>Start Year: </b><a id="startYear"></a></td>
 								<td align="left"><b>HS Credits: </b><a id="credits"></a></td> 
+							</tr>
+							<tr></tr><tr></tr><tr></tr><tr></tr>
+							<tr>
+								<td align="left"><b>Algebra I: </b><a id="comp_alg1"></a></td>
+								<td align="left"><b>Local Seals: </b><a id="sealsCount_local"></a></td> 
+							</tr>
+							<tr>
+								<td align="left"><b>English II: </b><a id="comp_eng2"></a></td>
+								<td align="left"><b>State Seals: </b><a id="sealsCount_state"></a></td> 
+							</tr>
+							<tr></tr><tr></tr><tr></tr><tr></tr>
+							<tr>
+								<td align="left"><b>After High School: </b><a id="afterHighSchoolPlans"></a></td>
+								<td align="left"><b>Post Graduation: </b><a id="postGradPlans"></a></td> 
 							</tr>
 						</table>
 					</td>
@@ -67,46 +72,30 @@
 				<input type="checkbox" id="initialBox">	Initial Meeting <input type="checkbox" id="reviewBox"> Review Meeting <input type="checkbox" id="finalBox"> Final Meeting
 				<br>
 			</div>
-					<table id="personTable" align="center" width="80%">
-						<h1 align="left">College and Career Readiness</h1>
-							<tr width="100%" align="center">
-								<td colspan="2"><b>Post Graduation Plans:&nbsp;&nbsp;</b><a id="postGradPlans"></a></td>
-							</tr>
-							<tr width="100%">
-								<td width="20%" align="right" style="padding-right: 10px">
-									<b>Areas of Strength:</b>
-								</td>
-								<td width="80%" height="60px" align="left" style="border-style:solid; border-width:1px; padding:6px">
-									<a id="strengthsPLP"></a>
-								</td>
-							</tr>
-							<tr width="100%">
-								<td width="20%" align="right" style="padding-right: 10px">
-									<b>Goals:</b>
-								</td>
-								<td width="80%" height="60px" align="left" style="border-style:solid; border-width:1px; padding:6px">
-									<a id="goalsPLP"></a>
-								</td>
-							</tr>
-							<tr width="100%">
-								<td width="20%" align="right" style="padding-right: 10px">
-									<b>Interests:</b>
-								</td>
-								<td width="80%" height="60px" align="left" style="border-style:solid; border-width:1px; padding:6px">
-									<a id="interestsPLP"></a>
-								</td>
-							</tr>
-						</table>
-			</div>
-			<h1>Academic Progress</h1>
+
+			<h1>Gradebook</h1>
 			<table width="100%">
 				<tr>
-					<td id="academicInfo" align="center" width="30%" style="valign=center; padding-right: 5px; margin: 0px;">
+					<td id="gradebook" width ="70%"></td>
+				</tr>
+			</table>
+
+			<h1>Attendance Measures</h1>
+			<table width="100%">
+				<tr>
+					<td id="academicInfoAttendance" align="center" width="30%" style="vertical-align: top; padding:0px 50px 0px 50px;">
 						<h3>Attendance: </h3><br>
-						<b>Required Hours: </b><br>
-						<a id="daysAbsent"></a><br><br>
-						<b>Missing Hours: </b><br>
-						<a id="missingHours"></a><br><br>
+						<b>Fall</b><br>
+						<b>Required Hours: </b><a id="reqHours_fall"></a><br>
+						<b>Actual Hours: </b><a id="actHours_fall"></a><br>
+						<b>Difference: </b><a id="difHours_fall"></a><br>
+						<br><br>
+						<b>Spring</b><br>
+						<b>Required Hours: </b><a id="reqHours_spring"></a><br>
+						<b>Actual Hours: </b><a id="actHours_spring"></a><br>
+						<b>Difference: </b><a id="difHours_spring"></a><br>
+					</td>
+					<td id="academicInfoCoursework" align="center" width="30%" style="vertical-align: top; padding:0px 50px 0px 50px;">
 						<h3>Coursework: </h3><br>
 						<b>Lessons Overdue: </b><br>
 						<a id="overdueLessons"></a><br><br>
@@ -115,9 +104,9 @@
 						<b>Last Assessment Complete: </b><br>
 						<a id="lastAssessment"></a><br><br>
 					</td>
-					<td id="gradebook" width ="70%"></td>
 				</tr>
-			</table>	
+			</table>
+
 			<br>
 			<br>
 			<h1>Student Success Plan Goal</h1>
@@ -125,6 +114,9 @@
 			<div id="planOfAction">
 				<h1>Plan of Action</h1>
 				<center><textarea rows="8" class="dynamicTA" id="planTA">What must the student do for this plan? If this is a Review Meeting or Final Meeting, copy the Plan of Action from the Initial Meeting.</textarea></center>
+				<center><textarea rows="8" class="dynamicTA" id="planTA">Credits</textarea></center>
+				<center><textarea rows="8" class="dynamicTA" id="planTA">Competencies</textarea></center>
+				<center><textarea rows="8" class="dynamicTA" id="planTA">Seals</textarea></center>
 			</div>
 			<div id="progressTowardsGoal">
 				<h1>Progress Towards Goal</h1>
