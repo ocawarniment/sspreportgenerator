@@ -118,7 +118,7 @@ function updateReport() {
 
 		document.getElementById('contactNumbers').innerText = result.contactNumbers;
 		document.getElementById('gradebook').innerHTML = result.gradebook;
-		document.getElementById('overdueLessons').innerText = result.overdueLessons;
+		document.getElementById('lessonsBehind').innerText = result.lessonsBehind;
 		document.getElementById('lastLesson').innerText = result.lastLesson;
 		document.getElementById('lastAssessment').innerText = result.lastAssessment;
 		document.getElementById('postGradPlans').innerText = result.postGradPlans;
@@ -133,9 +133,16 @@ function updateReport() {
 		document.getElementById('actHours_spring').innerText = result.actHours_spring;
 		document.getElementById('difHours_spring').innerText = result.difHours_spring;
 
-		document.getElementById('strengthsPLP').innerText = result.strengthsPLP;
-		document.getElementById('goalsPLP').innerText = result.goalsPLP;
-		document.getElementById('interestsPLP').innerHTML = result.interestsPLP;
+		//document.getElementById('strengthsPLP').innerText = result.strengthsPLP;
+		//document.getElementById('goalsPLP').innerText = result.goalsPLP;
+		//document.getElementById('interestsPLP').innerHTML = result.interestsPLP;
+
+		// competency dynamic
+		console.log(result.comp_alg1);
+		if(result.comp_alg1 == 'No' && result.comp_eng2 == 'No') {
+			document.querySelector('#alg1header').innerHTML = '<b>Competency Option</b>';
+			document.querySelector('#eng2header').innerHTML = '<b>Selected: </b> Yes';
+		}
 
 		// display all contact numbers
 		var contactsStack = '';

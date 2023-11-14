@@ -3,9 +3,9 @@ var storage = chrome.storage.local;
 
 if (document.getElementById('EF_NumberLessonsBehind') !== null) {
 	// overdue lessons
-	storage.set({'overdueLessons': document.getElementById('EF_NumberLessonsBehind').innerText.trim()});
+	storage.set({'lessonsBehind': document.getElementById('EF_NumberLessonsBehind').innerText.trim()});
 } else {
-	storage.set({'overdueLessons': "Not Found"});
+	storage.set({'lessonsBehind': "Not Found"});
 }
 
 if (document.querySelector('[id*="EF_LastLessonComplete"]') !== null) {
