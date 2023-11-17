@@ -139,7 +139,7 @@ function updateReport() {
 
 		// competency dynamic
 		console.log(result.comp_alg1);
-		if(result.comp_alg1 == 'No' && result.comp_eng2 == 'No') {
+		if(result.comp_alg1 == 'Alternative' && result.comp_eng2 == 'Alternative') {
 			document.querySelector('#alg1header').innerHTML = '<b>Competency Option</b>';
 			document.querySelector('#eng2header').innerHTML = '<b>Selected: </b> Yes';
 		}
