@@ -1,5 +1,7 @@
 // DV ID
-var dataviewId = '15492';
+const dvid_truancy = '17620'; //2023-24
+const dvid_focus = '17735'; //2023-24
+const dvid_gradplan = '14230';
 
 // shortcut for local storage
 var storage = chrome.storage.local;
@@ -98,9 +100,25 @@ function createReport() {
 		});
 	});
 	// Load truancy DV
-	chrome.tabs.create({ url: 'https://www.connexus.com/webuser/dataview.aspx?idWebuser=' + studentID + '&idDataview=' + dataviewId}, function(tab) {
+	chrome.tabs.create({ url: 'https://www.connexus.com/webuser/dataview.aspx?idWebuser=' + studentID + '&idDataview=' + dvid_truancy}, function(tab) {
 		chrome.tabs.executeScript(tab.id, {
 			file: '/scripts/truancy.js',
+			runAt: 'document_idle'
+		});
+	});	
+
+	// Load Ohio Grad Plan
+	chrome.tabs.create({ url: 'https://www.connexus.com/webuser/dataview.aspx?idWebuser=' + studentID + '&idDataview=' + dvid_gradplan}, function(tab) {
+		chrome.tabs.executeScript(tab.id, {
+			file: '/scripts/gradplan.js',
+			runAt: 'document_idle'
+		});
+	});	
+
+	// Load FF
+	chrome.tabs.create({ url: 'https://www.connexus.com/webuser/dataview.aspx?idWebuser=' + studentID + '&idDataview=' + dvid_focus}, function(tab) {
+		chrome.tabs.executeScript(tab.id, {
+			file: '/scripts/futurefocus.js',
 			runAt: 'document_idle'
 		});
 	});	

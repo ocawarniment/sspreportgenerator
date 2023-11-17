@@ -5,12 +5,16 @@ storage.get('currentReport', function(result) {
 	alert(result['studentName'] + "_" + result['currentMeeting']);	
 
 	alert(result['studentName']);
+	
 	document.getElementById('studentName').innerText = result['studentName'];
 	document.getElementById('caretakerName').innerText = result['caretakerName'];
 	document.getElementById('currentGrade').innerText = result['currentGrade'];
 	document.getElementById('startYear').innerText = result['startYear'];
 	document.getElementById('cohortYear').innerText = result['cohortYear'];
-	document.getElementById('credits').innerText = result['credits'];
+	document.getElementById('credits').innerText = result['comp_alg1'];
+	document.getElementById('comp_alg1').innerText = result['comp_alg1'];
+	document.getElementById('comp_eng2').innerText = result['comp_eng2'];
+
 	document.getElementById('gradebook').innerHTML = result['gradebook'];
 	document.getElementById('overdueLessons').innerText = result['overdueLessons'];
 	document.getElementById('lastLesson').innerText = result['lastLesson'];

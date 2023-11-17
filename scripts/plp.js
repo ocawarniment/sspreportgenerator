@@ -36,13 +36,6 @@ if (document.getElementById('EF_PhoneNumbers') !== null) {
 	storage.set({'contactNumbers': ["No Contact Information"]});
 }
 	
-if (document.getElementById('PostHighSchoolPlans_2') !== null) {
-	// store post grad plans
-	storage.set({'postGradPlans': document.getElementById('PostHighSchoolPlans_2').value});
-} else {
-	storage.set({'postGradPlans': "Not Found"});
-}
-	
 if (document.getElementById('InitiateWelcomeCall_Strengths') !== null) {
 	// store strengths
 	storage.set({'strengthsPLP': document.getElementById('InitiateWelcomeCall_Strengths').value});

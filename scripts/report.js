@@ -108,17 +108,41 @@ function updateReport() {
 		document.getElementById('startYear').innerText = result.startYear;
 		document.getElementById('cohortYear').innerText = result.cohortYear;
 		document.getElementById('credits').innerText = result.credits;
+		document.getElementById('comp_alg1').innerText = result.comp_alg1;
+		document.getElementById('comp_eng2').innerText = result.comp_eng2;
+		document.getElementById('sealsCount_local').innerText = result.sealsCount_local;
+		document.getElementById('sealsCount_state').innerText = result.sealsCount_state;
+
+		document.getElementById('afterHighSchoolPlans').innerText = result.afterHighSchoolPlans;
+		document.getElementById('postGradPlans').innerText = result.postGradPlans;
+
 		document.getElementById('contactNumbers').innerText = result.contactNumbers;
 		document.getElementById('gradebook').innerHTML = result.gradebook;
-		document.getElementById('overdueLessons').innerText = result.overdueLessons;
+		document.getElementById('lessonsBehind').innerText = result.lessonsBehind;
 		document.getElementById('lastLesson').innerText = result.lastLesson;
 		document.getElementById('lastAssessment').innerText = result.lastAssessment;
 		document.getElementById('postGradPlans').innerText = result.postGradPlans;
-		document.getElementById('daysAbsent').innerText = result.daysAbsent;
-		document.getElementById('missingHours').innerText = result.missingHours;
-		document.getElementById('strengthsPLP').innerText = result.strengthsPLP;
-		document.getElementById('goalsPLP').innerText = result.goalsPLP;
-		document.getElementById('interestsPLP').innerHTML = result.interestsPLP;
+		//document.getElementById('daysAbsent').innerText = result.daysAbsent;
+		//document.getElementById('missingHours').innerText = result.missingHours;
+
+		document.getElementById('reqHours_fall').innerText = result.reqHours_fall;
+		document.getElementById('actHours_fall').innerText = result.actHours_fall;
+		document.getElementById('difHours_fall').innerText = result.difHours_fall;
+
+		document.getElementById('reqHours_spring').innerText = result.reqHours_spring;
+		document.getElementById('actHours_spring').innerText = result.actHours_spring;
+		document.getElementById('difHours_spring').innerText = result.difHours_spring;
+
+		//document.getElementById('strengthsPLP').innerText = result.strengthsPLP;
+		//document.getElementById('goalsPLP').innerText = result.goalsPLP;
+		//document.getElementById('interestsPLP').innerHTML = result.interestsPLP;
+
+		// competency dynamic
+		console.log(result.comp_alg1);
+		if(result.comp_alg1 == 'Alternative' && result.comp_eng2 == 'Alternative') {
+			document.querySelector('#alg1header').innerHTML = '<b>Competency Option</b>';
+			document.querySelector('#eng2header').innerHTML = '<b>Selected: </b> Yes';
+		}
 
 		// display all contact numbers
 		var contactsStack = '';

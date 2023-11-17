@@ -13,14 +13,14 @@ if (document.getElementById("sectionsArea") !== null) {
 	// remove cells from the first row
 	tableRows[0].getElementsByTagName("th")[0].remove();
 	tableRows[0].getElementsByTagName("th")[5].remove();
-	tableRows[0].getElementsByTagName("th")[5].remove();
+	tableRows[0].getElementsByTagName("th")[7].remove();
 
 	// loop through, update links and remove cells from the remaining rows
 	for (var i = 1, len = tableRows.length; i < len; i++) {
 		// remove unwanted cells
 		tableRows[i].getElementsByTagName("td")[0].remove();
 		tableRows[i].getElementsByTagName("td")[5].remove();
-		tableRows[i].getElementsByTagName("td")[5].remove();
+		tableRows[i].getElementsByTagName("td")[7].remove();
 	}
 }
 
