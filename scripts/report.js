@@ -108,8 +108,8 @@ function updateReport() {
 		document.getElementById('startYear').innerText = result.startYear;
 		document.getElementById('cohortYear').innerText = result.cohortYear;
 		document.getElementById('credits').innerText = result.credits;
-		document.getElementById('comp_alg1').innerText = result.comp_alg1;
-		document.getElementById('comp_eng2').innerText = result.comp_eng2;
+		document.getElementById('comp_alg1').innerText = `${result.comp_alg1} - ${result.comp_alg1_attempts} attempt(s)`;
+		document.getElementById('comp_eng2').innerText = `${result.comp_eng2} - ${result.comp_eng2_attempts} attempt(s)`;
 		document.getElementById('sealsCount_local').innerText = result.sealsCount_local;
 		document.getElementById('sealsCount_state').innerText = result.sealsCount_state;
 
