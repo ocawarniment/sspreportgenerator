@@ -15,6 +15,22 @@ if (document.querySelector('#EF_OCA_LocalDiplomaSealCount') !== null) {
 	storage.set({'sealsCount_local': "Not Found"});
 }
 
+//EF_OHEOC_Alg_TestsTaken
+if (document.querySelector('#EF_OHEOC_Alg_TestsTaken') !== null) {
+	// last assessment complete date
+	storage.set({'comp_alg1_attempts': document.querySelector('#EF_OHEOC_Alg_TestsTaken').innerText.trim()});
+} else {
+	storage.set({'comp_alg1_attempts': 0});
+}
+
+//EF_OHEOC_ELA2_TestsTaken
+if (document.querySelector('#EF_OHEOC_ELA2_TestsTaken') !== null) {
+	// last assessment complete date
+	storage.set({'comp_eng2_attempts': document.querySelector('#EF_OHEOC_ELA2_TestsTaken').innerText.trim()});
+} else {
+	storage.set({'comp_eng2_attempts': 0});
+}
+
 if (document.querySelector('#EF_OCAGPcomp_MetENG2') !== null) {
 	// last assessment complete date
 	storage.set({'comp_eng2': document.querySelector('#EF_OCAGPcomp_MetENG2').innerText.trim()});
@@ -27,6 +43,20 @@ if (document.querySelector('#EF_OCAGPcomp_MetAlg1') !== null) {
 	storage.set({'comp_alg1': document.querySelector('#EF_OCAGPcomp_MetAlg1').innerText.trim()});
 } else {
 	storage.set({'comp_alg1': "Not Found"});
+}
+
+if (document.querySelector('#EF_OHEOCELAIISSMax') !== null) {
+	// total missing hours
+	storage.set({'maxscore_eng2': document.querySelector('#EF_OHEOCELAIISSMax').innerText.trim()});
+} else {
+	storage.set({'maxscore_eng2': "N/A"});
+}
+
+if (document.querySelector('#EF_OHEOCAlgSSMax') !== null) {
+	// total missing hours
+	storage.set({'maxscore_alg1': document.querySelector('#EF_OHEOCAlgSSMax').innerText.trim()});
+} else {
+	storage.set({'maxscore_alg1': "N/A"});
 }
 
 //OCAGPcomp_DemComp[0]
