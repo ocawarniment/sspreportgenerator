@@ -45,6 +45,20 @@ if (document.querySelector('#EF_OCAGPcomp_MetAlg1') !== null) {
 	storage.set({'comp_alg1': "Not Found"});
 }
 
+if (document.querySelector('#EF_OHEOCELAIISSMax') !== null) {
+	// total missing hours
+	storage.set({'maxscore_eng2': document.querySelector('#EF_OHEOCELAIISSMax').innerText.trim()});
+} else {
+	storage.set({'maxscore_eng2': "N/A"});
+}
+
+if (document.querySelector('#EF_OHEOCAlgSSMax') !== null) {
+	// total missing hours
+	storage.set({'maxscore_alg1': document.querySelector('#EF_OHEOCAlgSSMax').innerText.trim()});
+} else {
+	storage.set({'maxscore_alg1': "N/A"});
+}
+
 //OCAGPcomp_DemComp[0]
 if (document.getElementById("OCAGPcomp_DemComp[0]").checked == true) {
 	// total missing hours
