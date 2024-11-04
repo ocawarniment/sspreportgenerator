@@ -30,6 +30,7 @@ var truancyDone = false;
 // message listeners after report has loaded
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
+	console.log('message received', request);
 	// wait for all pages to load to prepare new report
 	if (request.type = "pageComplete") {
 		if (request.page == "plp") { plpDone = true; }
