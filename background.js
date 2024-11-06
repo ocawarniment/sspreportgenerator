@@ -1,6 +1,6 @@
 // DV ID
-const dvid_truancy = '17620'; //2023-24
-const dvid_focus = '17735'; //2023-24
+const dvid_truancy = '18374'; //2024-25
+const dvid_focus = '17735'; 
 const dvid_gradplan = '14230';
 
 // shortcut for local storage

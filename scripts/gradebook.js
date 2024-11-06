@@ -5,6 +5,7 @@ if (document.getElementById("sectionsArea") !== null) {
 	///// REMOVE UNWANTED VALUES AND TEXT
 	// collect the table by rows
 	var tableRows = document.getElementById("sectionsArea").getElementsByTagName("table")[0].getElementsByTagName("tbody")[0].getElementsByTagName("tr");
+	tableRows[0].remove();
 
 	// delete the "section summary" title
 	document.getElementById("sectionsArea").getElementsByTagName("span")[0].remove();
@@ -12,16 +13,18 @@ if (document.getElementById("sectionsArea") !== null) {
 
 	// remove cells from the first row
 	tableRows[0].getElementsByTagName("th")[0].remove();
-	tableRows[0].getElementsByTagName("th")[5].remove();
 	tableRows[0].getElementsByTagName("th")[7].remove();
+	//tableRows[0].getElementsByTagName("th")[7].remove();
 
 	// loop through, update links and remove cells from the remaining rows
-	for (var i = 1, len = tableRows.length; i < len; i++) {
+	for (var i = 1, len = tableRows.length; i < len-1; i++) {
+        console.log(tableRows[i]);
 		// remove unwanted cells
 		tableRows[i].getElementsByTagName("td")[0].remove();
-		tableRows[i].getElementsByTagName("td")[5].remove();
+		//tableRows[i].getElementsByTagName("td")[5].remove();
 		tableRows[i].getElementsByTagName("td")[7].remove();
 	}
+    tableRows[tableRows.length-1].remove();
 }
 
 // Only continue checking gradbook if table is found
