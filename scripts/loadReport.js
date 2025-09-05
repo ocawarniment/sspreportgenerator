@@ -1,4 +1,7 @@
 
+// shortcut for local storage
+var storage = chrome.storage.local;
+
 storage.get('currentReport', function(result) {
 	var localArray = result;
 	console.log(localArray);

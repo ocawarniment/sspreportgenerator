@@ -32,7 +32,7 @@ chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
 	console.log('message received', request);
 	// wait for all pages to load to prepare new report
-	if (request.type = "pageComplete") {
+	if (request.type == "pageComplete") {
 		if (request.page == "plp") { plpDone = true; }
 		if (request.page == "cohort") { cohortDone = true; }
 		if (request.page == "gradebook") { gradebookDone = true; }
