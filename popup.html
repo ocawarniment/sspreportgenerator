@@ -5,14 +5,16 @@
 	</head>
 	
 	<body style="width: 300px">
-		<h1>Saved SSP Reports</h1>
-		<button id="newReportButton">New Report</button>
-		<br><br>
-		<select id="reportList" size="20" style="width: 100%">
-			<option value="1" id="SSP120975608092017">Report 1</option>
-		</select>
+		<h1>SSP Report Generator</h1>
+		<div>
+			<input type="text" id="studentIDInput" placeholder="Enter Student ID" style="width: 200px;">
+			<button id="newReportButton">New Report</button>
+		</div>
 		<br>
-		<button id="loadReportButton" type="button">Load Report</button>
+		<p style="font-size: 12px; color: #666;">
+			Enter a student ID and click "New Report" to generate a new SSP report. 
+			Save your completed reports by printing them as PDF.
+		</p>
 	<script src="/scripts/popup.js"></script>
 	</body>
 </html>
